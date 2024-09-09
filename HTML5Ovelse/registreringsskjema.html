@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrering</title>
+</head>
+<body>
+        <header>
+            <h1>Velkommen til nettsiden</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hjem: Forsiden</a></li>
+                    <li><a href="index_oppgave_1.html" target="_blank">Valideringsoppgave</a></li>
+                    <li><a href="nettside_mal.html">Nettside-mal</a></li>
+                    <li><a href="kontakt.html">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <h2>Registrer deg:</h2>
+        <!--Her forteller den hvor denne skal sendes. Denne sendes som post. -->
+        <form method="post">
+            <!--Her legges navn vinduet med retriksjoner: max 60tegn og hvilken pattern som er lov. -->
+            <label for="navn">Navn:</label>
+            <input type="text" name="navn" placeholder="Ola Nordmann..." id="navn" maxlength="60" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                <br><br>
+            <!--Her legges epost vinduet med at epost må legges inn. -->
+            <label for="epost">Epost:</label>
+            <input type="email" name="epost" placeholder="dinepost@hiof.no" id="epost" required>
+                <br><br>
+            <!--Her legges passord vinduet med restriksjoner for minst 1 stor, 1 liten  bokstav og 1 tall. Må også innholde minst 8 tegn-->
+            <label for="passord">Passord:</label>
+            <input type="password" name="passord" placeholder="Nytt passord" id="passord" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="Må inneholde minst ett tall og én stor og én liten bokstav, og være på minst 8 eller flere tegn.">
+                <br><br>
+            <label for="alder">Alder:</label>
+            <input type="number" name="alder" placeholder="Din alder" id="alder" min="18" max="99" required>
+                <br><br>
+            <label for="telefon">Telefonnummer:</label>
+            <input type="phone" name="telefon" placeholder="Ditt telefonnummer..." id="telefon" pattern="[0-9]{8,12}" required>
+                <br><br>
+            <label for="fødselsdato">Fødselsdato:</label>
+            <input type="date" name="fødselsdato" id="fødselsdato" max="2024-12-31" required>
+                <br><br>
+            <label for="kjønn">Kjønn:</label>
+            <label> 
+                Mann:
+                <input type="radio" name="kjønn" id="mann" value="Mann" required>
+            </label>
+            <label>
+                Kvinne:
+                <input type="radio" name="kjønn" id="kvinne" value="Kvinne">
+            </label>
+            <label>
+                Annet:
+                <input type="radio" name="kjønn" id="annet" value="Annet">
+            </label>
+                <br><br>
+            <label>
+                Land:
+                <select for="land" required>
+                    <option value="Norge">Norge</option>
+                    <option value="Sverige">Sverige</option>
+                    <option value="Danmark">Danmark</option>
+                </select>
+            </label>
+                <br><br>
+            <label>
+                Personverv: Jeg godtar herved at informasjonen jeg har skrevet, deles med nettsiden.
+                <input type="checkbox" name="personvern" id="personvern" required>
+            </label>
+            <br><br>
+            <input type="submit">
+        </form>
+    </main>
+<footer>
+    <p>Kontakt meg på epost: <a href="mailto:yassinm@hiof.no">Epost</a></p>
+    <h3>&copy; 2024 Yassin Moussaoui</h3>
+</footer>
+</body>
+</html>
