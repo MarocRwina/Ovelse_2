@@ -37,12 +37,12 @@
             <input type="number" name="alder" placeholder="Din alder" id="alder" min="18" max="99" required>
                 <br><br>
             <label for="telefon">Telefonnummer:</label>
-            <input type="phone" name="telefon" placeholder="Ditt telefonnummer..." id="telefon" pattern="[0-9]{8,12}" required>
+            <input type="tel" name="telefon" placeholder="Ditt telefonnummer..." id="telefon" pattern="[0-9]{8,12}" required>
                 <br><br>
             <label for="fødselsdato">Fødselsdato:</label>
             <input type="date" name="fødselsdato" id="fødselsdato" max="2024-12-31" required>
                 <br><br>
-            <label for="kjønn">Kjønn:</label>
+            <label>Kjønn:</label>
             <label> 
                 Mann:
                 <input type="radio" name="kjønn" id="mann" value="Mann" required>
@@ -56,14 +56,13 @@
                 <input type="radio" name="kjønn" id="annet" value="Annet">
             </label>
                 <br><br>
-            <label>
-                Land:
-                <select for="land" required>
+            <label for="land">Land:</label>
+                <select name="land" id="land" required>
+                    <option value="">None</option>
                     <option value="Norge">Norge</option>
                     <option value="Sverige">Sverige</option>
                     <option value="Danmark">Danmark</option>
                 </select>
-            </label>
                 <br><br>
             <label>
                 Personverv: Jeg godtar herved at informasjonen jeg har skrevet, deles med nettsiden.
